@@ -11,22 +11,25 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 36, horizontal: 24),
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              StyledText(
-                'Welcome',
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
-              TextFormField(
-                decoration: const InputDecoration(prefixIcon: Icon(Icons.search), hintText: 'Search here'),
-              ),
-              const CategoryList(),
-              const PostList()
-            ],
+          const Image(image: AssetImage('assets/images/background.png')),
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 36, horizontal: 24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                StyledText(
+                  'Welcome',
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+                TextFormField(
+                  decoration: const InputDecoration(prefixIcon: Icon(Icons.search), hintText: 'Search here'),
+                ),
+                const CategoryList(),
+                const PostList()
+              ],
+            ),
           ),
         ],
       ),
