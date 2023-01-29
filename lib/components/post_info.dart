@@ -43,8 +43,8 @@ class PostInfo extends StatelessWidget {
                 ),
               ),
             ),
-          ]
-        )
+          ],
+        ),
       ],
     );
   }

@@ -25,7 +25,9 @@ class CategoryPage extends StatelessWidget {
         fontSize: 25,
         fontWeight: FontWeight.bold,
       ),
-      for (final post in posts) ...[if (post.categoryID == category.id) CategoryPostList(post: post)]
+      for (final post in posts) ...[
+        if (post.categoryID == category.id) CategoryPostList(post: post),
+      ],
     ];
   }
 }

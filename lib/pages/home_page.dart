@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                   decoration: const InputDecoration(prefixIcon: Icon(Icons.search), hintText: 'Search here'),
                 ),
                 const CategoryList(),
-                const PostList()
+                const PostList(),
               ],
             ),
           ),

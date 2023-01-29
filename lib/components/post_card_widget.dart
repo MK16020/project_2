@@ -30,8 +30,8 @@ class PostCardWidget extends StatelessWidget {
             ),
           ),
           PostInfo(
-            post: post
-          )
+            post: post,
+          ),
         ],
       ),
     );

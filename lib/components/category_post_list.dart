@@ -7,17 +7,17 @@ import '../models/post_model.dart';
 class CategoryPostList extends StatelessWidget {
   final Post post;
   const CategoryPostList({
-    Key? key, required this.post,
+    Key? key,
+    required this.post,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-       onTap: () => Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) => PostDetailPage(post: post)
-                  )),
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => PostDetailPage(post: post)),
+      ),
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 20),
         width: 350,
