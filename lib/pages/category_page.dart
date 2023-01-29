@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project_2/models/post_model.dart';
 
 import '../components/category_post_list.dart';
-import '../components/text_styled.dart';
+import '../components/styled_text.dart';
 import '../models/category_model.dart';
 
 class CategoryPage extends StatelessWidget {
-  final Category category;
+  final CategoryModel category;
   const CategoryPage({Key? key, required this.category}) : super(key: key);
 
   @override

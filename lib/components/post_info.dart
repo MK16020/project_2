@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/components/text_styled.dart';
+import 'package:flutter_project_2/components/styled_text.dart';
 import 'package:flutter_project_2/models/post_model.dart';
 
 class PostInfo extends StatelessWidget {
-  final Post post;
+  final PostModel post;
   const PostInfo({
     Key? key,
     required this.post,

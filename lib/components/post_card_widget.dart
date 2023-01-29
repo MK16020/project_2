@@ -1,7 +1,7 @@
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/components/post_info.dart';
-import 'package:flutter_project_2/components/text_styled.dart';
+import 'package:flutter_project_2/components/styled_text.dart';
 import 'package:flutter_project_2/models/post_model.dart';
 import 'package:flutter_project_2/models/user_model.dart';
 
@@ -10,7 +10,7 @@ class PostCardWidget extends StatelessWidget {
     Key? key,
     required this.post,
   }) : super(key: key);
-  final Post post;
+  final PostModel post;
   @override
   Widget build(BuildContext context) {
     return Card(

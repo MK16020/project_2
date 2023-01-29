@@ -1,12 +1,12 @@
 import 'package:faker/faker.dart';
 
-class Post {
+class PostModel {
   final String title, info, imageUrl;
   final int userID, categoryID;
 
   final int id;
 
-  Post({
+  PostModel({
     required this.id,
     required this.title,
     required this.userID,
@@ -16,8 +16,8 @@ class Post {
   });
 }
 
-List<Post> posts = [
-  Post(
+List<PostModel> posts = [
+  PostModel(
     id: 1,
     title: '${faker.lorem.words(4)}',
     userID: 1,
@@ -25,7 +25,7 @@ List<Post> posts = [
     info: '${faker.lorem.sentences(20)}',
     imageUrl: 'assets/images/post1.png',
   ),
-  Post(
+  PostModel(
     id: 2,
     title: '${faker.lorem.words(4)}',
     userID: 1,
@@ -33,7 +33,7 @@ List<Post> posts = [
     info: '${faker.lorem.sentences(20)}',
     imageUrl: 'assets/images/post2.png',
   ),
-  Post(
+  PostModel(
     id: 3,
     title: '${faker.lorem.words(4)}',
     userID: 2,
@@ -41,7 +41,7 @@ List<Post> posts = [
     info: '${faker.lorem.sentences(20)}',
     imageUrl: 'assets/images/post3.png',
   ),
-  Post(
+  PostModel(
     id: 4,
     title: '${faker.lorem.words(4)}',
     userID: 3,
@@ -49,7 +49,7 @@ List<Post> posts = [
     info: '${faker.lorem.sentences(20)}',
     imageUrl: 'assets/images/post4.png',
   ),
-  Post(
+  PostModel(
     id: 5,
     title: '${faker.lorem.words(4)}',
     userID: 1,
@@ -57,7 +57,7 @@ List<Post> posts = [
     info: '${faker.lorem.sentences(20)}',
     imageUrl: 'assets/images/post5.png',
   ),
-  Post(
+  PostModel(
     id: 6,
     title: '${faker.lorem.words(4)}',
     userID: 3,

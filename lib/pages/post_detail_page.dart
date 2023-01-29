@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/components/text_styled.dart';
+import 'package:flutter_project_2/components/styled_text.dart';
 import 'package:flutter_project_2/models/post_model.dart';
 
 import '../components/post_owner.dart';
 import '../components/rating_section.dart';
 
 class PostDetailPage extends StatelessWidget {
-  final Post post;
+  final PostModel post;
   const PostDetailPage({Key? key, required this.post}) : super(key: key);
 
   @override

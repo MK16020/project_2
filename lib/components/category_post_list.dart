@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/components/text_styled.dart';
+import 'package:flutter_project_2/components/styled_text.dart';
 import 'package:flutter_project_2/pages/post_detail_page.dart';
 
 import '../models/post_model.dart';
 
 class CategoryPostList extends StatelessWidget {
-  final Post post;
+  final PostModel post;
   const CategoryPostList({
     Key? key,
     required this.post,

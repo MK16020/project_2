@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
 
 import '../models/post_model.dart';
 import '../models/user_model.dart';
-import 'text_styled.dart';
+import 'styled_text.dart';
 
 class PostOwner extends StatelessWidget {
   const PostOwner({
@@ -11,7 +10,7 @@ class PostOwner extends StatelessWidget {
     required this.post,
   }) : super(key: key);
 
-  final Post post;
+  final PostModel post;
 
   @override
   Widget build(BuildContext context) {

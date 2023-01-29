@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/components/post_list.dart';
-import 'package:flutter_project_2/components/text_styled.dart';
+import 'package:flutter_project_2/components/styled_text.dart';
 
 import '../components/category_list.dart';
 
