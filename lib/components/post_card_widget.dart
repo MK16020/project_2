@@ -6,11 +6,12 @@ import 'package:flutter_project_2/models/post_model.dart';
 import 'package:flutter_project_2/models/user_model.dart';
 
 class PostCardWidget extends StatelessWidget {
+  final PostModel post;
   const PostCardWidget({
     Key? key,
     required this.post,
   }) : super(key: key);
-  final PostModel post;
+
   @override
   Widget build(BuildContext context) {
     return Card(

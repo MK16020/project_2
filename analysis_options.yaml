@@ -34,6 +34,7 @@ dart_code_metrics:
     - prefer-trailing-comma
     - prefer-conditional-expressions
     - no-equal-then-else
+    - no-magic-number: false
     - prefer-extracting-callbacks: false
     - arguments-ordering:
         child-last: true

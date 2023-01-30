@@ -13,21 +13,17 @@ class CategoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(padding: const EdgeInsets.symmetric(vertical: 36, horizontal: 24), children: [
-        Column(children: postsList),
+        Column(children: [
+          StyledText(
+            category.name,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
+          for (final post in posts) ...[
+            if (post.categoryID == category.id) CategoryPostList(post: post),
+          ],
+        ]),
       ]),
     );
-  }
-
-  List<Widget> get postsList {
-    return [
-      StyledText(
-        category.name,
-        fontSize: 25,
-        fontWeight: FontWeight.bold,
-      ),
-      for (final post in posts) ...[
-        if (post.categoryID == category.id) CategoryPostList(post: post),
-      ],
-    ];
   }
 }

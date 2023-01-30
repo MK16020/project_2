@@ -5,12 +5,11 @@ import '../models/category_model.dart';
 import '../pages/category_page.dart';
 
 class CategoryName extends StatelessWidget {
+  final CategoryModel category;
   const CategoryName({
     Key? key,
     required this.category,
   }) : super(key: key);
-
-  final CategoryModel category;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +23,7 @@ class CategoryName extends StatelessWidget {
         ),
       ),
       child: Container(
-        decoration: BoxDecoration(color: category.color, borderRadius: BorderRadius.circular(10)),
+        decoration: BoxDecoration(color: category.color, borderRadius: const BorderRadius.all(Radius.circular(10))),
         margin: const EdgeInsets.symmetric(vertical: 16),
         padding: const EdgeInsets.all(8),
         child: StyledText(category.name, fontSize: 18),

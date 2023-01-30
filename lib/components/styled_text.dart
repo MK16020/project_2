@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class StyledText extends StatelessWidget {
-  late FontWeight? fontWeight = FontWeight.normal;
+  FontWeight? fontWeight = FontWeight.normal;
   final double fontSize;
   int? maxLine = 4;
   Color? color = const Color(0xffDCD7C9);

@@ -5,12 +5,11 @@ import '../models/user_model.dart';
 import 'styled_text.dart';
 
 class PostOwner extends StatelessWidget {
+  final PostModel post;
   const PostOwner({
     Key? key,
     required this.post,
   }) : super(key: key);
-
-  final PostModel post;
 
   @override
   Widget build(BuildContext context) {

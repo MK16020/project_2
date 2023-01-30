@@ -12,7 +12,6 @@ class PostInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
           margin: const EdgeInsets.all(8),
@@ -24,7 +23,7 @@ class PostInfo extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              width: MediaQuery.of(context).size.width * 0.38,
+              width: 260,
               child: Expanded(
                 child: StyledText(
                   post.title,
@@ -34,7 +33,7 @@ class PostInfo extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: MediaQuery.of(context).size.width * 0.38,
+              width: 250,
               child: Expanded(
                 child: StyledText(
                   post.info,
