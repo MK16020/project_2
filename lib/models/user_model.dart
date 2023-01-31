@@ -7,7 +7,7 @@ class UserModel {
   UserModel({required this.id, required this.name, required this.bio, required this.imageUrl});
 }
 
-List<UserModel> users = [
+final List<UserModel> users = [
   UserModel(id: 1, name: faker.person.firstName(), bio: faker.lorem.sentence(), imageUrl: 'assets/images/user1.png'),
   UserModel(id: 2, name: faker.person.firstName(), bio: faker.lorem.sentence(), imageUrl: 'assets/images/user2.png'),
   UserModel(id: 3, name: faker.person.firstName(), bio: faker.lorem.sentence(), imageUrl: 'assets/images/user3.png'),

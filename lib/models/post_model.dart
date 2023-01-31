@@ -16,7 +16,7 @@ class PostModel {
   });
 }
 
-List<PostModel> posts = [
+final List<PostModel> posts = [
   PostModel(
     id: 1,
     title: '${faker.lorem.words(4)}',

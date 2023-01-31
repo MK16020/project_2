@@ -12,7 +12,7 @@ class CategoryModel {
   });
 }
 
-List<CategoryModel> categories = [
+final List<CategoryModel> categories = [
   CategoryModel(id: 1, name: 'day-to-day', color: Colors.amber),
   CategoryModel(id: 2, name: 'Big News', color: Colors.blue),
   CategoryModel(id: 3, name: 'Fun', color: Colors.teal),
