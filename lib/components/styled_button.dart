@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project_2/components/styled_text.dart';
 
 class StyledButton extends StatelessWidget {
-  final String Label;
+  final String label;
   const StyledButton({
     Key? key,
-    required this.Label,
+    required this.label,
   }) : super(key: key);
 
   @override
@@ -18,7 +18,7 @@ class StyledButton extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.all(12.0),
-        child: Center(child: StyledText(Label, fontSize: 16)),
+        child: Center(child: StyledText(label, fontSize: 16)),
       ),
     );
   }

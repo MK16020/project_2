@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/components/styled_text.dart';
-import 'package:flutter_project_2/models/user_model.dart';
-import 'package:flutter_project_2/pages/post_detail_page.dart';
+import 'package:flutter_project_2/pages/add_post_page.dart';
 
-import '../components/post_card_widget.dart';
-import '../models/post_model.dart';
+import '../components/profile_header.dart';
+import '../components/profile_info.dart';
+import '../components/profile_post_card.dart';
+
+const double headerHeight = 280;
+const double profileHeight = 144;
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -12,21 +14,37 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Container(
-        padding: const EdgeInsets.all(20),
-        decoration: const BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.all(Radius.circular(50))),
-        child: const Icon(Icons.add),
+      floatingActionButton: InkWell(
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const AddPostPage(),
+          ),
+        ),
+        child: Container(
+          padding: const EdgeInsets.all(20),
+          decoration: const BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.all(Radius.circular(50))),
+          child: const Icon(Icons.add),
+        ),
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(vertical: 30),
-        children: [
-          StyledText(
-            users[1].name,
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
+        children: const [
+          ProfileHeader(),
+          SizedBox(
+            height: profileHeight,
           ),
-          StyledText(users.first.bio, fontSize: 25),
-          for (final post in posts) ...[
+          ProfileInfo(),
+          SizedBox(height: 20),
+          ProfilePostCard(),
+        ],
+      ),
+    );
+  }
+}
+
+/**
+ * for (final post in posts) ...[
             if (post.userID == users.first.id)
               Column(
                 children: [
@@ -43,8 +61,4 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
           ],
-        ],
-      ),
-    );
-  }
-}
+ */

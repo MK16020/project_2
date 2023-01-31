@@ -2,10 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import '../components/credential_checker.dart';
 import '../components/login_footer.dart';
-import '../components/styled_button.dart';
 import '../components/styled_text.dart';
-import 'home_page.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -43,6 +42,7 @@ class _LoginState extends State<Login> {
                 StyledText('Welcome back, please enter your information', fontSize: 12),
                 const SizedBox(height: 28),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     StyledText('Email', fontSize: 16),
                     const SizedBox(height: 10),
@@ -57,53 +57,26 @@ class _LoginState extends State<Login> {
                         hintText: 'Enter Your Email',
                       ),
                     ),
+                    const SizedBox(height: 28),
+                    StyledText('password', fontSize: 16),
+                    const SizedBox(height: 10),
+                    TextField(
+                      obscureText: true,
+                      controller: passwordController,
+                      onChanged: (password) {
+                        setState(() {});
+                      },
+                      selectionWidthStyle: BoxWidthStyle.tight,
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: 'Enter Your password',
+                      ),
+                    ),
                   ],
                 ),
                 const SizedBox(height: 28),
-                StyledText('password', fontSize: 16),
+                CredentialChecker(emailController: emailController, passwordController: passwordController),
                 const SizedBox(height: 10),
-                TextField(
-                  controller: passwordController,
-                  onChanged: (password) {
-                    setState(() {});
-                  },
-                  selectionWidthStyle: BoxWidthStyle.tight,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: 'Enter Your password',
-                  ),
-                ),
-                const SizedBox(height: 28),
-                InkWell(
-                  onTap: () {
-                    final email = emailController.text;
-                    final password = passwordController.text;
-                    if (email == 'someone@mail.com' && password == '123456') {
-                      final nav = Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const HomePage(),
-                        ),
-                      );
-                    } else {
-                      final show = showDialog(
-                        context: context,
-                        builder: (_) {
-                          return const Dialog(
-                            child: SizedBox(
-                              height: 50,
-                              width: 60,
-                              child: Center(child: Text('Wrong info')),
-                            ),
-                          );
-                        },
-                      );
-                    }
-                  },
-                  child: const StyledButton(
-                    Label: 'Login',
-                  ),
-                ),
                 const LoginFooter(),
               ],
             ),
