@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../components/edit_post_field.dart';
-import '../models/post_model.dart';
+import '../../components/edit_post_field.dart';
+import '../../models/post_model.dart';
 
 class EditPostPage extends StatelessWidget {
   final PostModel post;

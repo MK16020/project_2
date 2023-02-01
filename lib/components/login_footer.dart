@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/components/styled_text.dart';
-import 'package:flutter_project_2/pages/register_page.dart';
+import 'package:flutter_project_2/pages/login_pages/register_page.dart';
 
 class LoginFooter extends StatelessWidget {
   const LoginFooter({

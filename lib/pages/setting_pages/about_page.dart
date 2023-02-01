@@ -1,7 +1,7 @@
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 
-import '../components/styled_text.dart';
+import '../../components/styled_text.dart';
 
 final fakeText = faker.lorem.sentences(7).toString();
 

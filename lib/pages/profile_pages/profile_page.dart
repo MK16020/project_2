@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/pages/add_post_page.dart';
+import 'package:flutter_project_2/pages/profile_pages/add_post_page.dart';
 
-import '../components/profile_header.dart';
-import '../components/profile_info.dart';
-import '../components/profile_post_card.dart';
+import '../../components/profile_header.dart';
+import '../../components/profile_info.dart';
+import '../../components/profile_post_card.dart';
 
 const double headerHeight = 280;
 const double profileHeight = 144;

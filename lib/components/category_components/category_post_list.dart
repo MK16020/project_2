@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/components/styled_text.dart';
-import 'package:flutter_project_2/pages/post_detail_page.dart';
+import 'package:flutter_project_2/pages/home_pages/post_detail_page.dart';
 
-import '../models/post_model.dart';
+import '../../models/post_model.dart';
 
 class CategoryPostList extends StatelessWidget {
   final PostModel post;

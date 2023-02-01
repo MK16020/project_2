@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/models/post_model.dart';
 
-import '../components/category_post_list.dart';
-import '../components/styled_text.dart';
-import '../models/category_model.dart';
+import '../../components/category_components/category_post_list.dart';
+import '../../components/styled_text.dart';
+import '../../models/category_model.dart';
 
 class CategoryPage extends StatelessWidget {
   final CategoryModel category;

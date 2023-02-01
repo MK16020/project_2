@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/components/styled_text.dart';
-import 'package:flutter_project_2/pages/edit_post_page.dart';
+import 'package:flutter_project_2/pages/profile_pages/edit_post_page.dart';
 
 import '../models/post_model.dart';
 

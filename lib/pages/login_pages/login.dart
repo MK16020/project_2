@@ -2,9 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import '../components/credential_checker.dart';
-import '../components/login_footer.dart';
-import '../components/styled_text.dart';
+import '../../components/credential_checker.dart';
+import '../../components/login_footer.dart';
+import '../../components/styled_text.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);

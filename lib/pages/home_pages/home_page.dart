@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project_2/components/post_list.dart';
 import 'package:flutter_project_2/components/styled_text.dart';
 
-import '../components/category_list.dart';
+import '../../components/category_components/category_list.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

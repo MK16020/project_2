@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/components/styled_text.dart';
 
-import '../models/category_model.dart';
-import '../pages/category_page.dart';
+import '../../models/category_model.dart';
+import '../../pages/home_pages/category_page.dart';
 
 class CategoryName extends StatelessWidget {
   final CategoryModel category;

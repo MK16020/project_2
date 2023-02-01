@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import '../components/register_field.dart';
-import '../components/styled_text.dart';
+import '../../components/register_field.dart';
+import '../../components/styled_text.dart';
 
 class AddPostPage extends StatelessWidget {
   const AddPostPage({Key? key}) : super(key: key);

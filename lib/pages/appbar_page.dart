@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/pages/favorite_page.dart';
-import 'package:flutter_project_2/pages/home_page.dart';
-import 'package:flutter_project_2/pages/profile_page.dart';
-import 'package:flutter_project_2/pages/settings_page.dart';
+import 'package:flutter_project_2/pages/home_pages/home_page.dart';
+import 'package:flutter_project_2/pages/profile_pages/profile_page.dart';
+import 'package:flutter_project_2/pages/setting_pages/settings_page.dart';
 
 import '../components/styled_text.dart';
 
