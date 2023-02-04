@@ -13,9 +13,9 @@ class CategoryModel {
 }
 
 final List<CategoryModel> categories = [
-  CategoryModel(id: 1, name: 'day-to-day', color: Colors.amber),
-  CategoryModel(id: 2, name: 'Big News', color: Colors.blue),
-  CategoryModel(id: 3, name: 'Fun', color: Colors.teal),
-  CategoryModel(id: 4, name: 'Games', color: Colors.teal),
-  CategoryModel(id: 5, name: 'Others', color: Colors.red),
+  CategoryModel(id: 0, name: 'day-to-day', color: Colors.amber),
+  CategoryModel(id: 1, name: 'Big News', color: Colors.blue),
+  CategoryModel(id: 2, name: 'Fun', color: Colors.teal),
+  CategoryModel(id: 3, name: 'Games', color: Colors.teal),
+  CategoryModel(id: 4, name: 'Others', color: Colors.red),
 ];

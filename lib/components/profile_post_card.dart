@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/components/styled_text.dart';
-import 'package:flutter_project_2/pages/profile_pages/edit_post_page.dart';
 
 import '../models/post_model.dart';
+import '../models/user_model.dart';
+import 'post_components/profile_posts.dart';
 
 class ProfilePostCard extends StatelessWidget {
+  final UserModel user;
+
   const ProfilePostCard({
     Key? key,
+    required this.user,
   }) : super(key: key);
 
   @override
@@ -27,31 +30,11 @@ class ProfilePostCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          ListTile(
-            leading: InkWell(
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => EditPostPage(post: posts[1]),
-                ),
-              ),
-              child: Icon(Icons.edit_outlined),
-            ),
-            trailing: InkWell(
-              child: Icon(Icons.delete_outline),
-            ),
-          ),
-          StyledText(
-            posts[1].title,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-          StyledText(
-            posts[1].info,
-            fontSize: 16,
-            maxLine: 10,
-          ),
-          Image.asset(posts[1].imageUrl),
+          for (var post in posts) ...[
+            if (post.userID == user.id) ...[
+              ProfilePosts(post: post),
+            ],
+          ],
         ],
       ),
     );

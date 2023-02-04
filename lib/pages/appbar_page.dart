@@ -28,30 +28,36 @@ class _AppbarPageState extends State<AppbarPage> {
         ),
         backgroundColor: Colors.white,
         actions: [
-          InkWell(
-            onTap: () {
-              showModalBottomSheet<void>(
-                context: context,
-                builder: (BuildContext context) {
-                  return Container();
-                },
-              );
-            },
-            child: const Icon(
-              Icons.menu_rounded,
-              color: Colors.black,
-            ),
-          ),
-          InkWell(
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const SettingsPage(),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: InkWell(
+              onTap: () {
+                showModalBottomSheet<void>(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return Container();
+                  },
+                );
+              },
+              child: const Icon(
+                Icons.menu_rounded,
+                color: Colors.black,
               ),
             ),
-            child: const Icon(
-              Icons.settings,
-              color: Colors.black,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: InkWell(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SettingsPage(),
+                ),
+              ),
+              child: const Icon(
+                Icons.settings,
+                color: Colors.black,
+              ),
             ),
           ),
         ],

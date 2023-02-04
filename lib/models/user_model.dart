@@ -8,8 +8,8 @@ class UserModel {
 }
 
 final List<UserModel> users = [
-  UserModel(id: 1, name: faker.person.firstName(), bio: faker.lorem.sentence(), imageUrl: 'assets/images/user1.png'),
-  UserModel(id: 2, name: faker.person.firstName(), bio: faker.lorem.sentence(), imageUrl: 'assets/images/user2.png'),
-  UserModel(id: 3, name: faker.person.firstName(), bio: faker.lorem.sentence(), imageUrl: 'assets/images/user3.png'),
-  UserModel(id: 4, name: faker.person.firstName(), bio: faker.lorem.sentence(), imageUrl: 'assets/images/user4.png'),
+  UserModel(id: 0, name: faker.person.firstName(), bio: faker.lorem.sentence(), imageUrl: 'assets/images/user1.png'),
+  UserModel(id: 1, name: faker.person.firstName(), bio: faker.lorem.sentence(), imageUrl: 'assets/images/user2.png'),
+  UserModel(id: 2, name: faker.person.firstName(), bio: faker.lorem.sentence(), imageUrl: 'assets/images/user3.png'),
+  UserModel(id: 3, name: faker.person.firstName(), bio: faker.lorem.sentence(), imageUrl: 'assets/images/user4.png'),
 ];

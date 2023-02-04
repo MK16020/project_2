@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_2/models/user_model.dart';
 import 'package:flutter_project_2/pages/profile_pages/add_post_page.dart';
 
 import '../../components/profile_header.dart';
@@ -7,6 +8,7 @@ import '../../components/profile_post_card.dart';
 
 const double headerHeight = 280;
 const double profileHeight = 144;
+final UserModel user = users.first;
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -28,15 +30,12 @@ class ProfilePage extends StatelessWidget {
         ),
       ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 30),
-        children: const [
-          ProfileHeader(),
-          SizedBox(
-            height: profileHeight,
-          ),
-          ProfileInfo(),
-          SizedBox(height: 20),
-          ProfilePostCard(),
+        children: [
+          ProfileHeader(user: user),
+          const SizedBox(height: profileHeight),
+          ProfileInfo(user: user),
+          const SizedBox(height: 20),
+          ProfilePostCard(user: user),
         ],
       ),
     );

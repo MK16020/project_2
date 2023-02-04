@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_2/components/app_bar_component.dart';
 
 import '../../components/edit_post_field.dart';
 import '../../models/post_model.dart';
@@ -12,6 +13,7 @@ class EditPostPage extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
+          const AppBarComponent(),
           Container(
             child: Stack(
               children: [

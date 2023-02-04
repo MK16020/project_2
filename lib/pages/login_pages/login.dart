@@ -75,7 +75,7 @@ class _LoginState extends State<Login> {
                   ],
                 ),
                 const SizedBox(height: 28),
-                CredentialChecker(emailController: emailController, passwordController: passwordController),
+                const CredentialChecker(),
                 const SizedBox(height: 10),
                 const LoginFooter(),
               ],

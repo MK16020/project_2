@@ -5,9 +5,11 @@ import '../models/user_model.dart';
 const double headerHeight = 280;
 const double profileHeight = 144;
 
+
 class ProfileHeader extends StatelessWidget {
+  final UserModel user;
   const ProfileHeader({
-    Key? key,
+    Key? key, required this.user,
   }) : super(key: key);
 
   @override
@@ -31,7 +33,7 @@ class ProfileHeader extends StatelessWidget {
             ),
             child: CircleAvatar(
               radius: profileHeight / 2,
-              backgroundImage: AssetImage(users[1].imageUrl),
+              backgroundImage: AssetImage(user.imageUrl),
             ),
           ),
         ),

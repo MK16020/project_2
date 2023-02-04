@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/components/post_list.dart';
+import 'package:flutter_project_2/components/post_components/post_list.dart';
 import 'package:flutter_project_2/components/styled_text.dart';
 
 import '../../components/category_components/category_list.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+  
+}
+
+class _HomePageState extends State<HomePage> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +35,7 @@ class HomePage extends StatelessWidget {
                 ),
                 const CategoryList(),
                 const PostList(),
+                
               ],
             ),
           ),

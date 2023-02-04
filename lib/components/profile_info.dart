@@ -4,8 +4,9 @@ import 'package:flutter_project_2/components/styled_text.dart';
 import '../models/user_model.dart';
 
 class ProfileInfo extends StatelessWidget {
+  final UserModel user;
   const ProfileInfo({
-    Key? key,
+    Key? key, required this.user,
   }) : super(key: key);
 
   @override
@@ -16,11 +17,11 @@ class ProfileInfo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           StyledText(
-            users[1].name,
+            user.name,
             fontSize: 30,
             fontWeight: FontWeight.bold,
           ),
-          StyledText(users.first.bio, fontSize: 25),
+          StyledText(user.bio, fontSize: 25),
         ],
       ),
     );

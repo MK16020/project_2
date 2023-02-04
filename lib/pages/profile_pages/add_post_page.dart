@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_project_2/components/app_bar_component.dart';
 
 import '../../components/register_field.dart';
 import '../../components/styled_text.dart';
@@ -13,6 +14,7 @@ class AddPostPage extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
+          const AppBarComponent(),
           Container(
             color: Colors.grey,
             height: 300,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_2/components/styled_text.dart';
 import 'package:flutter_project_2/pages/setting_pages/about_page.dart';
+import 'package:flutter_project_2/pages/setting_pages/terms_conditions.dart';
 import 'package:settings_ui/settings_ui.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -13,6 +15,17 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: InkWell(
+          child: const Icon(
+            Icons.arrow_back_ios_new_rounded,
+            color: Colors.black,
+          ),
+          onTap: () => Navigator.pop(context),
+        ),
+        title: Center(child: StyledText('Blog App', fontSize: 20, color: Colors.black)),
+      ),
       body: Container(
         padding: const EdgeInsets.all(30),
         color: const Color(0xfff0f0f0),
@@ -42,6 +55,16 @@ class _SettingsPageState extends State<SettingsPage> {
                   final nav = Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const AboutPage()),
+                  );
+                },
+              ),
+              SettingsTile(
+                title: const Text('Terms and Conditions'),
+                leading: const Icon(Icons.list_alt),
+                onPressed: (BuildContext context) {
+                  final nav = Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const TermsConditions()),
                   );
                 },
               ),
