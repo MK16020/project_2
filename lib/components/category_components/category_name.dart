@@ -22,11 +22,27 @@ class CategoryName extends StatelessWidget {
           ),
         ),
       ),
-      child: Container(
-        decoration: BoxDecoration(color: category.color, borderRadius: const BorderRadius.all(Radius.circular(10))),
-        margin: const EdgeInsets.symmetric(vertical: 16),
-        padding: const EdgeInsets.all(8),
-        child: StyledText(category.name, fontSize: 18),
+      child: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: category.color,
+              borderRadius: const BorderRadius.all(
+                Radius.circular(10),
+              ),
+            ),
+            height: 150,
+            width: 150,
+            margin: const EdgeInsets.symmetric(vertical: 16),
+            padding: const EdgeInsets.all(8),
+            child: Image(image: AssetImage(category.imageUrl)),
+          ),
+          Positioned(
+            bottom: 24,
+            left: 8,
+            child: StyledText(category.name, fontSize: 18, color: Colors.white),
+          ),
+        ],
       ),
     );
   }

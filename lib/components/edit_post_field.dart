@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_2/components/styled_button.dart';
 import 'package:flutter_project_2/components/styled_text.dart';
 
 import '../models/post_model.dart';
@@ -33,6 +34,15 @@ class EditPostField extends StatelessWidget {
             initialValue: post.info,
             decoration: const InputDecoration(
               border: OutlineInputBorder(),
+            ),
+          ),
+          const SizedBox(height: 10),
+          Center(
+            child: InkWell(
+              child: const StyledButton(label: 'Save changes'),
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
           ),
         ],

@@ -32,8 +32,8 @@ class AboutPage extends StatelessWidget {
                 const SizedBox(height: 24),
                 StyledText('Team', fontSize: 20),
                 const SizedBox(height: 16),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     CircleAvatar(backgroundImage: AssetImage('images/user1.png')),
                     SizedBox(width: 16),
                     CircleAvatar(backgroundImage: AssetImage('images/user2.png')),

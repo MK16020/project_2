@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_project_2/pages/profile_pages/profile_page.dart';
 
 import '../../models/post_model.dart';
 import '../../pages/profile_pages/edit_post_page.dart';
@@ -16,20 +16,22 @@ class ProfilePosts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ListTile(
-          leading: InkWell(
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => EditPostPage(post: post),
+        if (post.userID == 0) ...[
+          ListTile(
+            leading: InkWell(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => EditPostPage(post: post),
+                ),
               ),
+              child: const Icon(Icons.edit_outlined),
             ),
-            child: const Icon(Icons.edit_outlined),
+            trailing: const InkWell(
+              child: Icon(Icons.delete_outline),
+            ),
           ),
-          trailing: const InkWell(
-            child: Icon(Icons.delete_outline),
-          ),
-        ),
+        ],
         StyledText(
           post.title,
           fontSize: 20,

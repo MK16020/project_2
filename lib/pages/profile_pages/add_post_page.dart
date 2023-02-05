@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/components/app_bar_component.dart';
+import 'package:flutter_project_2/components/styled_button.dart';
 
 import '../../components/register_field.dart';
 import '../../components/styled_text.dart';
@@ -37,6 +38,8 @@ class AddPostPage extends StatelessWidget {
                     hintText: 'Enter Your Post here',
                   ),
                 ),
+                const SizedBox(height: 10),
+                const StyledButton(label: ' save '),
               ],
             ),
           ),

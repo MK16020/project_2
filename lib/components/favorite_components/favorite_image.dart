@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/models/post_model.dart';
 
+import '../../pages/home_pages/post_detail_page.dart';
+
 class FavoriteImage extends StatelessWidget {
   final double postHeight;
   final double postWidth;
@@ -14,7 +16,7 @@ class FavoriteImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
+    return InkWell(
       child: Container(
         height: postHeight,
         width: postWidth,
@@ -25,6 +27,12 @@ class FavoriteImage extends StatelessWidget {
         child: Image(
           image: AssetImage(post.imageUrl),
           fit: BoxFit.cover,
+        ),
+      ),
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => PostDetailPage(post: post),
         ),
       ),
     );

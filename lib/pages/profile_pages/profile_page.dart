@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_2/components/styled_button.dart';
 import 'package:flutter_project_2/models/user_model.dart';
 import 'package:flutter_project_2/pages/profile_pages/add_post_page.dart';
 
@@ -36,6 +37,7 @@ class ProfilePage extends StatelessWidget {
           ProfileInfo(user: user),
           const SizedBox(height: 20),
           ProfilePostCard(user: user),
+          
         ],
       ),
     );

@@ -19,7 +19,7 @@ class PostModel {
 final List<PostModel> posts = [
   PostModel(
     id: 0,
-    title: '${faker.lorem.words(4)}',
+    title: 'How to Keep Mice Out of Your Camper',
     userID: 1,
     categoryID: 2,
     info: '${faker.lorem.sentences(20)}',
@@ -27,7 +27,7 @@ final List<PostModel> posts = [
   ),
   PostModel(
     id: 1,
-    title: '${faker.lorem.words(4)}',
+    title: 'Paddleboard vs. Kayak: Is One Better Than the Other?',
     userID: 1,
     categoryID: 2,
     info: '${faker.lorem.sentences(20)}',
@@ -35,7 +35,7 @@ final List<PostModel> posts = [
   ),
   PostModel(
     id: 2,
-    title: '${faker.lorem.words(4)}',
+    title: 'How Long Is the Golden Gate Bridge?',
     userID: 2,
     categoryID: 1,
     info: '${faker.lorem.sentences(20)}',
@@ -43,7 +43,7 @@ final List<PostModel> posts = [
   ),
   PostModel(
     id: 3,
-    title: '${faker.lorem.words(4)}',
+    title: '9 Blog Title Formulas That Get Clicks',
     userID: 3,
     categoryID: 1,
     info: '${faker.lorem.sentences(20)}',
@@ -51,7 +51,7 @@ final List<PostModel> posts = [
   ),
   PostModel(
     id: 4,
-    title: '${faker.lorem.words(4)}',
+    title: 'Judo vs. Jiu Titus: What\'s the Difference?',
     userID: 1,
     categoryID: 3,
     info: '${faker.lorem.sentences(20)}',
@@ -59,7 +59,7 @@ final List<PostModel> posts = [
   ),
   PostModel(
     id: 5,
-    title: '${faker.lorem.words(4)}',
+    title: 'value of SEO',
     userID: 3,
     categoryID: 3,
     info: '${faker.lorem.sentences(20)}',
@@ -67,7 +67,7 @@ final List<PostModel> posts = [
   ),
   PostModel(
     id: 6,
-    title: '${faker.lorem.words(4)}',
+    title: 'This High-Fat Diet Is Actually Healthy & Great for Weight Loss',
     userID: 0,
     categoryID: 4,
     info: '${faker.lorem.sentences(20)}',

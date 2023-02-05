@@ -23,17 +23,18 @@ class PostInfo extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              width: 260,
+              width: 150,
               child: Expanded(
                 child: StyledText(
                   post.title,
                   fontSize: 22,
+                  maxLine: 2,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
             SizedBox(
-              width: 250,
+              width: 140,
               child: Expanded(
                 child: StyledText(
                   post.info,

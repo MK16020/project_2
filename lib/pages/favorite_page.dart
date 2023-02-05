@@ -54,6 +54,23 @@ class _FavoritePageState extends State<FavoritePage> {
               height: 20,
             ),
           ],
+          if (PostModel.favoriteList.isEmpty) ...[
+            Center(
+              child: Column(
+                children: [
+                  const Icon(
+                    Icons.folder_off,
+                    color: Colors.blueGrey,
+                  ),
+                  StyledText(
+                    'Favorite page is Empty ',
+                    fontSize: 20,
+                    color: Colors.blueGrey,
+                  ),
+                ],
+              ),
+            ),
+          ],
         ],
       ),
     );
